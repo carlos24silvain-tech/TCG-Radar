@@ -150,15 +150,28 @@ struct OwnedCardCopy: Identifiable, Codable {
 
 // MARK: - Card Version Group
 
-struct CardVersionGroup: Identifiable {
+struct CardVersionGroup: Identifiable, Codable {
 
-    let id = UUID()
+    let id: UUID
 
     let finish: String
     let variant: String
     let language: String
 
     var copies: [OwnedCardCopy]
+    init(
+        id: UUID = UUID(),
+        finish: String,
+        variant: String,
+        language: String,
+        copies: [OwnedCardCopy]
+    ) {
+        self.id = id
+        self.finish = finish
+        self.variant = variant
+        self.language = language
+        self.copies = copies
+    }
 
     var quantity: Int {
         copies.count
@@ -174,9 +187,9 @@ struct CardVersionGroup: Identifiable {
 
 // MARK: - Collection Group
 
-struct CollectionEntry: Identifiable {
+struct CollectionEntry: Identifiable, Codable {
 
-    let id = UUID()
+    let id: UUID
 
     let name: String
     let game: String
@@ -184,7 +197,21 @@ struct CollectionEntry: Identifiable {
     let collectorNumber: String
 
     var versions: [CardVersionGroup]
-
+    init(
+        id: UUID = UUID(),
+        name: String,
+        game: String,
+        setName: String,
+        collectorNumber: String,
+        versions: [CardVersionGroup]
+    ) {
+        self.id = id
+        self.name = name
+        self.game = game
+        self.setName = setName
+        self.collectorNumber = collectorNumber
+        self.versions = versions
+    }
     var totalQuantity: Int {
         versions.reduce(0) { total, version in
             total + version.quantity

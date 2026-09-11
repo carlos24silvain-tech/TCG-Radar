@@ -110,8 +110,8 @@
 		BE87279C30543BE90020C9CD /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				BE8727803051D03B0020C9CD /* ScryfallService.swift */,
 				BE8727983052AA0E0020C9CD /* GradingEngine.swift */,
+				BE8727803051D03B0020C9CD /* ScryfallService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -127,20 +127,20 @@
 		BE87279E30543CE40020C9CD /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				BE8727A730545DE10020C9CD /* AnalyticsView.swift */,
 				BE8727733051C64D0020C9CD /* CameraScannerView.swift */,
 				BE8727743051C64D0020C9CD /* ContentView.swift */,
 				BE8727883051F9CD0020C9CD /* CardCopiesView.swift */,
-				BE87278E305208790020C9CD /* IndividualCopyView.swift */,
 				BE87279430521B200020C9CD /* CornerInspectionView.swift */,
+				BE8727A530545D2F0020C9CD /* CollectionView.swift */,
+				BE8727AB3054673B0020C9CD /* CardDetailsView.swift */,
+				BE8727A130545AD40020C9CD /* DropView.swift */,
 				BE87279030520D8C0020C9CD /* GradingAnalysisView.swift */,
 				BE872792305210090020C9CD /* GradingPhotoPicker.swift */,
 				BE87279F305459E60020C9CD /* HomeView.swift */,
-				BE8727A130545AD40020C9CD /* DropView.swift */,
+				BE87278E305208790020C9CD /* IndividualCopyView.swift */,
 				BE8727A330545C1A0020C9CD /* ScanView.swift */,
-				BE8727A530545D2F0020C9CD /* CollectionView.swift */,
-				BE8727A730545DE10020C9CD /* AnalyticsView.swift */,
 				BE8727A930545ED60020C9CD /* SharedComponents.swift */,
-				BE8727AB3054673B0020C9CD /* CardDetailsView.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";

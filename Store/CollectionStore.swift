@@ -1,12 +1,73 @@
+import Foundation
 import SwiftUI
 import Combine
 
 @MainActor
 final class CollectionStore: ObservableObject {
-
+             
     @Published var cards: [CollectionEntry] = []
+    init() {
+        loadCollection()
+    }
+    private let saveFileName = "collection.json"
 
+    private var saveURL: URL {
+        let fileManager = FileManager.default
 
+        let applicationSupport = fileManager.urls(
+            for: .applicationSupportDirectory,
+            in: .userDomainMask
+        )[0]
+
+        let appDirectory = applicationSupport.appendingPathComponent(
+            "TCGRadar",
+            isDirectory: true
+        )
+
+        try? fileManager.createDirectory(
+            at: appDirectory,
+            withIntermediateDirectories: true
+        )
+
+        return appDirectory.appendingPathComponent(saveFileName)
+    }
+    // MARK: - Load Collection
+
+    func loadCollection() {
+        let url = saveURL
+
+        guard FileManager.default.fileExists(atPath: url.path) else {
+            return
+        }
+
+        do {
+            let data = try Data(contentsOf: url)
+            let decodedCards = try JSONDecoder().decode(
+                [CollectionEntry].self,
+                from: data
+            )
+
+            cards = decodedCards
+
+        } catch {
+            print("Failed to load collection: \(error)")
+        }
+    }
+    
+    // MARK: - Save Collection
+
+    func saveCollection() {
+        do {
+            let data = try JSONEncoder().encode(cards)
+            try data.write(
+                to: saveURL,
+                options: .atomic
+            )
+
+        } catch {
+            print("Failed to save collection: \(error)")
+        }
+    }
     // MARK: - Add Card
 
     func addCard(
@@ -76,14 +137,16 @@ final class CollectionStore: ObservableObject {
             )
 
             cards.append(newEntry)
-        }
-    }
+            }
 
+            saveCollection()
+            }
 
     // MARK: - Remove Card
 
     func removeCard(_ card: CollectionEntry) {
         cards.removeAll { $0.id == card.id }
+        saveCollection()
     }
 
 
