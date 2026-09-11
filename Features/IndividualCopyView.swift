@@ -19,11 +19,9 @@ struct IndividualCopyView: View {
                     Text(copy.card.game)
                         .foregroundStyle(.secondary)
                     
-                    Text(copy.card.setName)
-                        .foregroundStyle(.secondary)
+                    Text(copy.printing.setName)                        .foregroundStyle(.secondary)
                     
-                    Text("#\(copy.card.collectorNumber)")
-                        .font(.caption)
+                    Text("#\(copy.printing.collectorNumber)")                        .font(.caption)
                         .foregroundStyle(.secondary)
                 }
                 .padding(.vertical, 4)
@@ -33,17 +31,16 @@ struct IndividualCopyView: View {
                 
                 LabeledContent(
                     "Language",
-                    value: copy.card.language.uppercased()
+                    value: copy.printing.language.uppercased()
                 )
                 
                 LabeledContent(
                     "Finish",
-                    value: copy.card.finish.capitalized
-                )
+                    value: copy.printing.finish.capitalized                )
                 
                 LabeledContent(
                     "Variant",
-                    value: copy.card.variant
+                    value: copy.printing.variant
                 )
             }
             
@@ -58,7 +55,7 @@ struct IndividualCopyView: View {
                     Text(
                         String(
                             format: "$%.2f",
-                            copy.card.marketValue
+                            copy.marketValue
                         )
                     )
                     .fontWeight(.bold)

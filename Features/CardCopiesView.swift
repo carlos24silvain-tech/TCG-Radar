@@ -71,7 +71,7 @@ struct CardCopiesView: View {
                                     .font(.caption)
                                     .foregroundStyle(.secondary)
                                 
-                                Text("#\(copy.card.collectorNumber)")
+                                Text("#\(copy.printing.collectorNumber)")
                                     .font(.caption2)
                                     .foregroundStyle(.secondary)
                             }
@@ -81,7 +81,7 @@ struct CardCopiesView: View {
                             Text(
                                 String(
                                     format: "$%.2f",
-                                    copy.card.marketValue
+                                    copy.marketValue
                                 )
                             )
                             .font(.headline)

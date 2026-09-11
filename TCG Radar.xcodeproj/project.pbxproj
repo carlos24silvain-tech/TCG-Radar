@@ -6,37 +6,54 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BE8727763051C64D0020C9CD /* CameraScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8727733051C64D0020C9CD /* CameraScannerView.swift */; };
+		BE8727773051C64D0020C9CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8727743051C64D0020C9CD /* ContentView.swift */; };
+		BE87277F3051CCB90020C9CD /* CardIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87277E3051CCB90020C9CD /* CardIdentity.swift */; };
+		BE8727813051D03B0020C9CD /* ScryfallService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8727803051D03B0020C9CD /* ScryfallService.swift */; };
+		BE8727873051D6E30020C9CD /* CollectionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8727863051D6E30020C9CD /* CollectionStore.swift */; };
+		BE8727893051F9CD0020C9CD /* CardCopiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8727883051F9CD0020C9CD /* CardCopiesView.swift */; };
+		BE87278D305201710020C9CD /* GradingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87278C305201710020C9CD /* GradingModels.swift */; };
+		BE87278F305208790020C9CD /* IndividualCopyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87278E305208790020C9CD /* IndividualCopyView.swift */; };
+		BE87279130520D8C0020C9CD /* GradingAnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87279030520D8C0020C9CD /* GradingAnalysisView.swift */; };
+		BE872793305210090020C9CD /* GradingPhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE872792305210090020C9CD /* GradingPhotoPicker.swift */; };
+		BE87279530521B200020C9CD /* CornerInspectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87279430521B200020C9CD /* CornerInspectionView.swift */; };
+		BE8727993052AA0E0020C9CD /* GradingEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8727983052AA0E0020C9CD /* GradingEngine.swift */; };
+		BE8727A0305459E60020C9CD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87279F305459E60020C9CD /* HomeView.swift */; };
+		BE8727A230545AD40020C9CD /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8727A130545AD40020C9CD /* DropView.swift */; };
+		BE8727A430545C1A0020C9CD /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8727A330545C1A0020C9CD /* ScanView.swift */; };
+		BE8727A630545D2F0020C9CD /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8727A530545D2F0020C9CD /* CollectionView.swift */; };
+		BE8727A830545DE10020C9CD /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8727A730545DE10020C9CD /* AnalyticsView.swift */; };
+		BE8727AA30545ED60020C9CD /* SharedComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8727A930545ED60020C9CD /* SharedComponents.swift */; };
+		BE8727AC3054673B0020C9CD /* CardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8727AB3054673B0020C9CD /* CardDetailsView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		BE1F3CEF305130BD00588414 /* TCG Radar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TCG Radar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE8727733051C64D0020C9CD /* CameraScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScannerView.swift; sourceTree = "<group>"; };
+		BE8727743051C64D0020C9CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BE87277E3051CCB90020C9CD /* CardIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardIdentity.swift; sourceTree = "<group>"; };
+		BE8727803051D03B0020C9CD /* ScryfallService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScryfallService.swift; sourceTree = "<group>"; };
+		BE8727863051D6E30020C9CD /* CollectionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionStore.swift; sourceTree = "<group>"; };
+		BE8727883051F9CD0020C9CD /* CardCopiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCopiesView.swift; sourceTree = "<group>"; };
+		BE87278C305201710020C9CD /* GradingModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingModels.swift; sourceTree = "<group>"; };
+		BE87278E305208790020C9CD /* IndividualCopyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualCopyView.swift; sourceTree = "<group>"; };
+		BE87279030520D8C0020C9CD /* GradingAnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingAnalysisView.swift; sourceTree = "<group>"; };
+		BE872792305210090020C9CD /* GradingPhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingPhotoPicker.swift; sourceTree = "<group>"; };
+		BE87279430521B200020C9CD /* CornerInspectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerInspectionView.swift; sourceTree = "<group>"; };
+		BE8727983052AA0E0020C9CD /* GradingEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingEngine.swift; sourceTree = "<group>"; };
+		BE87279F305459E60020C9CD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BE8727A130545AD40020C9CD /* DropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
+		BE8727A330545C1A0020C9CD /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		BE8727A530545D2F0020C9CD /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		BE8727A730545DE10020C9CD /* AnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsView.swift; sourceTree = "<group>"; };
+		BE8727A930545ED60020C9CD /* SharedComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedComponents.swift; sourceTree = "<group>"; };
+		BE8727AB3054673B0020C9CD /* CardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		BE87276D30515DEF0020C9CD /* Exceptions for "TCG Radar" folder in "TCG Radar" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				.swift,
-			);
-			target = BE1F3CEE305130BD00588414 /* TCG Radar */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		BE87276E30515DEF0020C9CD /* Exceptions for "TCG Radar" folder in "Compile Sources" phase from "TCG Radar" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = BE1F3CEB305130BD00588414 /* Sources */;
-			membershipExceptions = (
-				.swift,
-			);
-		};
-/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		BE1F3CF1305130BD00588414 /* TCG Radar */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				BE87276D30515DEF0020C9CD /* Exceptions for "TCG Radar" folder in "TCG Radar" target */,
-				BE87276E30515DEF0020C9CD /* Exceptions for "TCG Radar" folder in "Compile Sources" phase from "TCG Radar" target */,
-			);
 			path = "TCG Radar";
 			sourceTree = "<group>";
 		};
@@ -56,7 +73,11 @@
 		BE1F3CE6305130BD00588414 = {
 			isa = PBXGroup;
 			children = (
-				BE1F3CF1305130BD00588414 /* TCG Radar */,
+				BE87279E30543CE40020C9CD /* Features */,
+				BE87279D30543BF90020C9CD /* Store */,
+				BE87279C30543BE90020C9CD /* Services */,
+				BE87279B30543BD00020C9CD /* Core */,
+				BE87279A30543BAF0020C9CD /* App */,
 				BE1F3CF0305130BD00588414 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +88,61 @@
 				BE1F3CEF305130BD00588414 /* TCG Radar.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BE87279A30543BAF0020C9CD /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BE1F3CF1305130BD00588414 /* TCG Radar */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BE87279B30543BD00020C9CD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BE87277E3051CCB90020C9CD /* CardIdentity.swift */,
+				BE87278C305201710020C9CD /* GradingModels.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BE87279C30543BE90020C9CD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BE8727803051D03B0020C9CD /* ScryfallService.swift */,
+				BE8727983052AA0E0020C9CD /* GradingEngine.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BE87279D30543BF90020C9CD /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				BE8727863051D6E30020C9CD /* CollectionStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		BE87279E30543CE40020C9CD /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				BE8727733051C64D0020C9CD /* CameraScannerView.swift */,
+				BE8727743051C64D0020C9CD /* ContentView.swift */,
+				BE8727883051F9CD0020C9CD /* CardCopiesView.swift */,
+				BE87278E305208790020C9CD /* IndividualCopyView.swift */,
+				BE87279430521B200020C9CD /* CornerInspectionView.swift */,
+				BE87279030520D8C0020C9CD /* GradingAnalysisView.swift */,
+				BE872792305210090020C9CD /* GradingPhotoPicker.swift */,
+				BE87279F305459E60020C9CD /* HomeView.swift */,
+				BE8727A130545AD40020C9CD /* DropView.swift */,
+				BE8727A330545C1A0020C9CD /* ScanView.swift */,
+				BE8727A530545D2F0020C9CD /* CollectionView.swift */,
+				BE8727A730545DE10020C9CD /* AnalyticsView.swift */,
+				BE8727A930545ED60020C9CD /* SharedComponents.swift */,
+				BE8727AB3054673B0020C9CD /* CardDetailsView.swift */,
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +219,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE8727A630545D2F0020C9CD /* CollectionView.swift in Sources */,
+				BE8727993052AA0E0020C9CD /* GradingEngine.swift in Sources */,
+				BE87277F3051CCB90020C9CD /* CardIdentity.swift in Sources */,
+				BE8727763051C64D0020C9CD /* CameraScannerView.swift in Sources */,
+				BE872793305210090020C9CD /* GradingPhotoPicker.swift in Sources */,
+				BE87279130520D8C0020C9CD /* GradingAnalysisView.swift in Sources */,
+				BE87278D305201710020C9CD /* GradingModels.swift in Sources */,
+				BE87278F305208790020C9CD /* IndividualCopyView.swift in Sources */,
+				BE8727873051D6E30020C9CD /* CollectionStore.swift in Sources */,
+				BE8727AC3054673B0020C9CD /* CardDetailsView.swift in Sources */,
+				BE8727A230545AD40020C9CD /* DropView.swift in Sources */,
+				BE8727773051C64D0020C9CD /* ContentView.swift in Sources */,
+				BE8727A0305459E60020C9CD /* HomeView.swift in Sources */,
+				BE8727AA30545ED60020C9CD /* SharedComponents.swift in Sources */,
+				BE8727813051D03B0020C9CD /* ScryfallService.swift in Sources */,
+				BE8727893051F9CD0020C9CD /* CardCopiesView.swift in Sources */,
+				BE8727A830545DE10020C9CD /* AnalyticsView.swift in Sources */,
+				BE8727A430545C1A0020C9CD /* ScanView.swift in Sources */,
+				BE87279530521B200020C9CD /* CornerInspectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

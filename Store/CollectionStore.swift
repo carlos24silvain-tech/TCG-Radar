@@ -3,84 +3,98 @@ import Combine
 
 @MainActor
 final class CollectionStore: ObservableObject {
-    
+
     @Published var cards: [CollectionEntry] = []
-    
-    
+
+
     // MARK: - Add Card
-    
-    func addCard(_ card: CardIdentity) {
-        
-        // Find an exi ing collection entry for the same
-        // physical printing.
+
+    func addCard(
+        _ card: CardIdentity,
+        printing: CardPrinting,
+        priceObservation: PriceObservation? = nil
+    ) {
+
+       
+
+        let priceHistory: [PriceObservation]
+
+        if let priceObservation {
+            priceHistory = [priceObservation]
+        } else {
+            priceHistory = []
+        }
+
+        let newCopy = OwnedCardCopy(
+            printing: printing,
+            priceHistory: priceHistory
+        )
+
         if let groupIndex = cards.firstIndex(where: {
-            $0.matches(card)
+            $0.matches(printing)
         }) {
-            
-            // Find the matching version.
+
+            // Same printing + same version.
             if let versionIndex = cards[groupIndex].versions.firstIndex(where: {
-                $0.matches(card)
+                $0.matches(printing)
             }) {
-                
-                let copy = OwnedCardCopy(card: card)
-                
-                cards[groupIndex].versions[versionIndex].copies.append(copy)
-                
+
+                cards[groupIndex]
+                    .versions[versionIndex]
+                    .copies
+                    .append(newCopy)
+
             } else {
-                
-                // Same card, but a new version.
+
+                // Same printing, different finish / variant / language.
                 let newVersion = CardVersionGroup(
-                    finish: card.finish,
-                    variant: card.variant,
-                    language: card.language,
-                    copies: [
-                        OwnedCardCopy(card: card)
-                    ]
+                    finish: printing.finish,
+                    variant: printing.variant,
+                    language: printing.language,
+                    copies: [newCopy]
                 )
-                
+
                 cards[groupIndex].versions.append(newVersion)
             }
-            
+
         } else {
-            
-            // Completely new card.
+
+            // Completely new collection entry.
             let newVersion = CardVersionGroup(
-                finish: card.finish,
-                variant: card.variant,
-                language: card.language,
-                copies: [
-                    OwnedCardCopy(card: card)
-                ]
+                finish: printing.finish,
+                variant: printing.variant,
+                language: printing.language,
+                copies: [newCopy]
             )
-            
+
             let newEntry = CollectionEntry(
                 name: card.name,
                 game: card.game,
-                setName: card.setName,
-                collectorNumber: card.collectorNumber,
+                setName: printing.setName,
+                collectorNumber: printing.collectorNumber,
                 versions: [newVersion]
             )
-            
+
             cards.append(newEntry)
         }
     }
-    
-    
+
+
     // MARK: - Remove Card
-    
+
     func removeCard(_ card: CollectionEntry) {
         cards.removeAll { $0.id == card.id }
     }
-    
-    
+
+
     // MARK: - Collection Totals
-    
+
     var totalMarketValue: Double {
         cards.reduce(0) { total, card in
             total + card.totalValue
         }
     }
-    
+
     var cardCount: Int {
         cards.reduce(0) { total, card in
             total + card.totalQuantity

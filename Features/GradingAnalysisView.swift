@@ -30,10 +30,10 @@ struct GradingAnalysisView: View {
                             .font(.title2)
                             .fontWeight(.bold)
                         
-                        Text(copy.card.setName)
+                        Text(copy.printing.setName)
                             .foregroundStyle(.secondary)
                         
-                        Text("#\(copy.card.collectorNumber)")
+                        Text("#\(copy.printing.collectorNumber)")
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }
